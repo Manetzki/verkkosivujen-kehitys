@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    transition: background-color 0.5s ease; /* Hieno sisääntulo */
+    color: white;
+    font-family: 'Roboto', sans-serif; /* Hieno fontti */
+    font-size: 12px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+h4{
+    font-size: 15px;
+    padding: 2px;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#filter-options {
+    display: none;
+}
+
+#filter-btn:focus + #filter-options, #filter-options:focus {
+    display: block;
+}
+
+
+
+.nav-link:hover {
+    color: #f0f0f0 !important;
+}
+
+/* Bannerin tyylit */
+#banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10em 1em;
+    background-image: url("https://wallpapercave.com/wp/wp13355156.jpg");
+    background-size: cover;
+    height: 80vh; /* Korkeuden säätö tarpeen mukaan */
+    opacity: 0; /* Alkuarvo animaatiolle */
+    transform: translateY(50px); /* Alkuarvo animaatiolle */
+    animation: fadeUp 2s forwards; /* Animaatio */
+}
+
+/* Fade up -animaatio */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#banner h2 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+#banner p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* Nappien tyylit */
+#banner button {
+    background-color: white;
+    border: none;
+    border-radius: 20%;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hieno siirtymä */
+}
+
+#banner button a {
+    text-decoration: none;
+    color: black;
+}
+
+#banner button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05); /* Hieno efekt */
+}
+
+/* Alatunnisteen tyylit */
+footer {
+    background-color: black;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    transition: background-color 0.5s ease; /* Hieno sisääntulo */
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Hieno siirtymä */
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Pääsisällön tyylit */
+.container1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5em 1em;
+    background-color: #000;
+    color: white;
+    font-size: 12px;
+}
+
+/* Sisältölaatikkojen tyylit */
+.box1, .box2 {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    width: 45%;
+    background-color: white;
+    color: black;
+    margin: 1em 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hieno siirtymä */
+}
+
+.box1:hover, .box2:hover {
+    transform: scale(1.05); /* Hieno efekt */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Hieno efekt */
+}
+.container2{
+    transition: color 0.3s ease; /* Hieno siirtymä */
+}
+
+
+.box1 h3, .box2 h3 {
+    margin-top: 0;
+}
+
+.box1 p, .box2 p {
+    margin-bottom: 5px;
+}
+iframe{
+    width: 100%;
+}
+.box3{
+    background-color: white;
+    color:black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    margin: 50px;
+    padding: 10px;
+}
+.container{
+    padding: 80px;
+    background-color: #000;
+}
+.kuva1{
+    width: 100%;
+}
+.col{
+    text-align: center;
+    font-size: 14px;
+    margin: 5em;
+    padding:5em;
+}
+.container5{
+    background-image: url("https://www.osktools.com/cdn/shop/files/osk_tools_wallpaper.jpg?v=1715334197&width=1500");
+    background-size: cover;
+}
+.border{
+   padding: 10px; 
+}
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    height: 100vh;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
